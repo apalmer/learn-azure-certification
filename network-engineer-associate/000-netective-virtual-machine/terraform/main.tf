@@ -87,7 +87,7 @@ resource "azurerm_linux_virtual_machine" "netective" {
 
   size                = "Standard_B2s"
   admin_username      = "adminuser"
-  custom_data = filebase64("${path.module}/../cli/ubuntu-cloud-init.yaml")
+  custom_data = filebase64("${path.module}/custom_data/ubuntu-cloud-init.yaml")
 
   network_interface_ids = [
     azurerm_network_interface.netective.id
