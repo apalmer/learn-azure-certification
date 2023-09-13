@@ -95,7 +95,7 @@ resource "azurerm_linux_virtual_machine" "netective" {
 
   admin_ssh_key {
     username   = "adminuser"
-    public_key = file("~/.ssh/netective.pub")
+    public_key = file("~/.ssh/id_rsa.pub")
   }
 
   os_disk {
